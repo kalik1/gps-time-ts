@@ -1,0 +1,69 @@
+{
+  "name": "gps-time-ts",
+  "version": "2.0.0",
+  "watch": {
+    "dev": "./src/**/*.js"
+  },
+  "scripts": {
+    "lint": "eslint src/**",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm test && rm -rf ./lib/ && && npm run build:all",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "start": "node lib",
+    "debug": "node --inspect-brk ./index.js",
+    "watch": "npm-watch dev",
+    "dev": "nodemon index.js",
+    "coverage": "jest --collect-coverage",
+    "test": "jest",
+    "preversion": "npm run build",
+    "postversion": "git push && git push --tags && npm publish",
+    "build:all": "npm run build:types && npm run build:js"
+  },
+  "engines": {
+    "node": ">=8.1.0",
+    "npm": ">=3.8.6"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/register": "^7.11.5",
+    "@babel/runtime": "^7.11.2",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.14.6",
+    "concurrently": "^5.3.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "npm-watch": "^0.7.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {},
+  "description": "Small utility in Typescript to convert times between GPS epoch (midnight January 6, 1980) and Unix epoch (midnight January 1, 1970), taking into account leap seconds.",
+  "author": "David Calhoun",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "kalik1",
+      "email": "kalikTheOne@outlook.com",
+      "url": "https://github.com/kalik1"
+    },
+    {
+      "name": "ssaulss",
+      "email": "ssaulss@gmail.com",
+      "url": "https://github.com/ssaulss"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kalik1/gps-time-ts"
+  },
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js"
+}

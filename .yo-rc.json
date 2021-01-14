@@ -1,0 +1,13 @@
+{
+  "generator-node-tsc-babel": {
+    "isLibrary": "true",
+    "appname": "gps-time-ts",
+    "gitBaseUrl": "github.com",
+    "gitWorkspaceName": "kalik1",
+    "gitProjectName": "gps-time-ts",
+    "description": "Small utility in Typescript to convert times between GPS epoch (midnight January 6, 1980) and Unix epoch (midnight January 1, 1970), taking into account leap seconds.",
+    "author": "kalik1 && ssaulss",
+    "installNpm": false,
+    "currentYear": 2021
+  }
+}
