@@ -1,5 +1,5 @@
 # gps-time-ts
-[![Build Status](https://travis-ci.org/davidcalhoun/gps-time.js.svg?branch=master)](https://travis-ci.org/davidcalhoun/gps-time.js)
+
 [![Downloads][downloads-image]][npm-url]
 
 Small utility to convert times between GPS epoch (midnight January 6, 1980) and Unix epoch (midnight January 1, 1970), taking into account leap seconds.
@@ -50,4 +50,4 @@ $ npm test
 
 
 [downloads-image]: https://img.shields.io/npm/dm/gps-time.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/gps-time
+[npm-url]: https://www.npmjs.com/package/gps-time-ts
