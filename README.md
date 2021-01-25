@@ -26,15 +26,15 @@ import {toGPSMS, toUnixMS} from 'gps-time-ts';
 
 
 ## Converting from Unix time to GPS time.
-```javascript
+```typescript
 const unixMS = Date.now();  // 1454168480000
-gpsTime.toGPSMS(unixMS);  // 1138203697000
+toGPSMS(unixMS);  // 1138203697000
 ```
 
 ## Converting from GPS time to Unix time.
-```javascript
+```typescript
 const gpsMS = 1138203697000;
-gpsTime.toUnixMS(gpsMS);  // 1454168480000
+toUnixMS(gpsMS);  // 1454168480000
 ```
 
 # Tests
